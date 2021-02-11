@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    
+  <button mat-icon-button [matMenuTriggerFor]="belowMenu" class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+    <!-- Refatorar para componente menu e array de restaurantes com nome e url -->
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item (click)="navigateTo('restaurante-purple-earth')">Restaurante Purple Earth</button>
+      <button mat-menu-item (click)="navigateTo('restaurante-a-opus-somos-nos')">Restaurante A Opus Somos Nós</button>
+      <button mat-menu-item (click)="navigateTo('restaurante-nojentao')">Restaurante Nojentão</button>
+    </mat-menu>
+  </button>
+    <span>Cardopus</span>
+  </mat-toolbar>
