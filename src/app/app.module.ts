@@ -14,12 +14,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { RestaurantPageComponent } from './pages/restaurant-page/restaurant-page.component';
+import { RestaurantMenuComponent } from './components/restaurant-menu/restaurant-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    HomeComponent
+    HomeComponent,
+    RestaurantPageComponent,
+    RestaurantMenuComponent
   ],
   imports: [
     BrowserModule,
