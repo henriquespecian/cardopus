@@ -16,6 +16,12 @@ import { HomeComponent } from './pages/home/home.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { RestaurantPageComponent } from './pages/restaurant-page/restaurant-page.component';
 import { RestaurantMenuComponent } from './components/restaurant-menu/restaurant-menu.component';
+import { AngularFireModule } from '@angular/fire';
+import { FirebaseConfig } from '../environments/firebase.config';
+import {​​ AngularFireDatabase }​​ from '@angular/fire/database';
+import {​​ AngularFireAuthModule }​​ from '@angular/fire/auth';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +40,11 @@ import { RestaurantMenuComponent } from './components/restaurant-menu/restaurant
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AngularFireModule.initializeApp(FirebaseConfig),
+    AngularFireAuthModule,
+    AngularFireDatabase,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
